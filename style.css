@@ -1,0 +1,259 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f2f4f8;
+    color: #1c1c1c;
+    line-height: 1.6;
+    padding-bottom: 50px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #1c1c1c;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #0b7dda;
+  }
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #0b7dda, #67c6ff);
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  <section id="projects" class="projects">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <img src="calculator.png" alt="Calculator App" />
+    <div class="project-info">
+      <h3>Simple Calculator</h3>
+      <p>A basic calculator built with HTML, CSS, and JavaScript. Supports basic arithmetic.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+      <a href="https://stepa-gh.github.io/calculator/" target="_blank">🔗 Live Demo</a> |
+      <a href="https://github.com/stepa-gh/calculator" target="_blank">📦 GitHub Code</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="weather.png" alt="Weather App" />
+    <div class="project-info">
+      <h3>Weather App (Coming Soon)</h3>
+      <p>Displays current weather data using a live API. Work in progress!</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript, OpenWeather API</p>
+      <a href="#">🔗 Live Demo</a> |
+      <a href="#">📦 GitHub Code</a>
+    </div>
+  </div>
+
+</section>
+
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px 20px;
+    background-color: #e3f2fd;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0b7dda;
+    color: white;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive Fix */
+  @media (min-width: 768px) {
+    .project-card {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .project-card img {
+      width: 300px;
+    }
+  }
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: transform 0.3s;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.05);
+  }
+
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0b7dda; /* You can change this to black or dark */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #preloader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 6px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/* Dark Mode Toggle Style */
+.dark-mode-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Default Light Mode */
+  body {
+    background-color: #fff;
+    color: #222;
+    transition: all 0.3s ease;
+  }
+  
+  /* Dark Mode Style */
+  body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #1f1f1f;
+  }
+  
+  body.dark-mode a {
+    color: #66ccff;
+  }
+  
+  body.dark-mode .project-card {
+    background-color: #1e1e1e;
+    border-color: #444;
+  }
+  .cursor {
+    display: inline-block;
+    color: inherit;
+    font-weight: bold;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  .project-card {
+    display: flex; /* makes items inside stack nicely */
+    flex-direction: column; /* puts image, title, etc. vertically */
+    gap: 0.5rem; /* small space between each part inside */
+    padding: 1rem; /* space inside the box */
+    margin: 1rem 0; /* space between boxes */
+    border: 1px solid #ccc; /* light grey border */
+    border-radius: 12px; /* curved corners */
+    background-color: #f9f9f9; /* light background color */
+    transition: transform 0.3s; /* smooth animation on hover */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); /* moves card up when mouse hovers */
+  }
+  
+  .project-card img {
+    max-width: 100%; /* makes image not go outside the box */
+    border-radius: 10px; /* soft corners on the image */
+  }
+  
+  .project-info a {
+    display: inline-block; /* makes links behave like buttons */
+    margin-top: 5px; /* small space at top of links */
+    color: #0077cc; /* nice blue color */
+    text-decoration: none; /* removes underline */
+  }
+  

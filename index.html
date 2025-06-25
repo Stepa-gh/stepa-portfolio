@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stepa Portfolio</title>
+  <title>Stepa Portfolio - cybersecurity and web developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+    <div id="preloader"></div>
+
+
     <nav class="navbar">
         <div class="nav-container">
           <div class="logo">Stepa</div>
@@ -17,13 +24,19 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <div class="dark-mode-toggle">
+            <label>
+              🌞<input type="checkbox" id="modeToggle" />🌙
+            </label>
+          </div>
+          
         </div>
       </nav>
       
       
-  <header id="hero" class="hero">
+  <header id="hero" class="hero"> 
     <h1>Hi, I'm Elvis “Stepa” Muthii</h1>
-    <p>Cybersecurity Student & Aspiring Developer</p>
+    <p><span id="typing-text"></span><span class="cursor">|</span></p>
     <img src="me.1.jpg" alt="me.2" class="profile-pic" />
   </header>
   <section id="about" class="about">
@@ -36,7 +49,7 @@
   </section>
   
 
-  <section id="projects" class="projects">
+  <section id="projects" class="projects"> 
     <h2>Projects</h2>
     <div class="project-grid">
       
@@ -44,7 +57,7 @@
         <img src="calculator.png" alt="Calculator App" />
         <h3>Calculator App</h3>
         <p>Built with HTML, CSS, and JS.</p>
-        <a href="calculator/index.html" target="_blank">Live Demo</a>
+        <a href="projects/calculator.html">🔍 View Details</a>
       </div>
   
       <div class="project-card">
@@ -66,7 +79,7 @@
   
   
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact"> 
     <h2>Contact Me</h2>
     <p>Email: muthiielvis90@gmail.com</p>
     <p>WhatsApp: +254 797841772</p>
@@ -78,4 +91,33 @@
 
   <script src="script.js"></script>
 </body>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </html>
+<form>
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+  
+  <a href="https://wa.me/254797841772" class="whatsapp-float" target="_blank">
+    💬 Chat on WhatsApp
+  </a>
+  
+  <a href="https://github.com/stepa-gh/my-calculator" target="_blank">View on GitHub</a>
+
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Cybersecurity Basics</li>
+      <li>Penetration Testing (Learning)</li>
+      <li>React (Coming Soon)</li>
+    </ul>
+  </section>
+  
